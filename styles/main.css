@@ -1,0 +1,132 @@
+.nav-item {
+    margin: 0 auto;
+}
+.nav-item ul {
+    margin: 0;
+    padding: 0;
+}
+.nav-item ul li {
+   
+    display: inline-block;
+}
+.nav-item ul li a {
+    text-decoration: none;
+    padding: 8px 15px;
+    color: #7e98a6;
+
+}
+
+.connect{
+    border-radius: 10px;
+    background-color: #4468e2;
+    color :white;
+    border: 0;
+    margin: 5px;
+    padding: 8px;
+}
+
+.mainPicOverlay{
+    background-color: rgba(0, 11, 38, 0.5);
+    height: 100%;
+    width: 85%;
+    bottom: 0;
+    color: #FFFFFF;
+    /* left: 89px; */
+    margin: 0;
+    position: absolute;
+
+
+}
+
+.mainFigure{
+    margin: 0;
+    padding:0
+}
+
+.mainFirstDiv{
+    position: absolute;
+    margin-inline: 3.75rem;
+
+    display: flex;
+    width: 100%;
+    /* justify-content: center; */
+}
+.textDiv{
+    text-align: center;
+   
+}
+.textDiv h2{
+    font-size: 25px;
+}
+
+.exploreButton{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.exploreButton li{
+    display: inline-block;
+}
+
+.secondDiv{
+    position: absolute;
+    margin-inline: 3.75rem;
+}
+
+main{
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.container{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 50% 15% auto;
+}
+
+article{
+    border-right: 0.5px solid lightgrey;
+    padding: 10px;
+}
+.secondSection{
+    display: flex;
+    justify-content: center;
+    grid-gap: 10px;
+    /* top: 50px; */
+    margin: 10px;
+}
+
+.recommendation{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+}
+
+summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+.finalSection{
+    text-align: center;
+    margin-top :40px;
+}

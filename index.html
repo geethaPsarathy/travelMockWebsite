@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assignment-2</title>
+    <base href="/">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" href="/images/logo.png" />
+
+    <!-- Using google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bungee+Spice&family=Lobster&family=Nabla&display=swap" rel="stylesheet">
+
+    <!-- Meta Tags used for better SEO  -->
+    <meta name="title" content="travello website">
+    <meta name="description" content="this website is useful to find best travel places ">
+    <meta name="keywords" content="travel,explore,vacation">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Geetha Parthasarathy">
+
+    <!-- Make webpage responsive based on device width  -->
+    <meta name="viewport" content="width=device-width initial-scale=1">
+</head>
+
+<body>
+
+    <!-- Header with Navigation Bar , Logo and Connect button -->
+
+    <header style="display: flex;align-items:center">
+        <img style="
+        padding: 5px;" height="25" src="/images/logo.png">
+
+        <!-- Navigation bar with list of items -->
+        <nav class="nav-item">
+            <ul style="list-style-type: none;">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#places">Places</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+
+        <!-- Connect button with link to linkedin page  -->
+        <form action="https://linkedin.com/" target="_blank">
+            <input type="submit" class="connect" value="Connect" title="click to connect">
+        </form>
+    </header>
+
+    <br>
+
+    <!-- Main Content with different Sections  -->
+    <main id="home">
+        <div class="container">
+
+            <!-- First Section with Pictures and Explore Buttons -->
+
+            <section>
+                <div class="mainFirstDiv" style="position:absolute;">
+                    <figure class="mainFigure">
+                        <img style="max-width:95vw;width: 85vw;" src="/images/main.png" alt="main" loading="lazy">
+
+
+                        <div class="mainPicOverlay">
+                            <article class="textDiv">
+                                <h2>TRAVEL TO EXPLORE</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                                    <em>Lorem Ipsum has been the
+                                        industry's standard</em> <br> dummy text ever since the <strong>1590</strong>,
+                                    <br> when an unknown printer took a galley of type and
+                                    scrambled it to make a type specimen book.
+                                </p>
+                                <aside>
+                                    <p style="font-family: 'Bungee Spice', cursive;">Package starts from <s>$1000</s> <strong>$999</strong></p>
+                                </aside>
+                                
+                            </article>
+                            
+
+                            <!-- Form Validation with option field as required and date validation in valid format
+                               -->
+                            <div class="exploreButton">
+                                <!-- Menu tag with multiple form elements  -->
+
+                                <menu style="padding:0;margin: 5px;padding: 10px;background: grey;">
+                                    <form action="#blog" method="get">
+
+                                        <!-- Country grouped with optgroup and set as required Field -->
+                                        <label>Country</label>
+                                        <select name="country" required>
+                                            <option selected="true" value="">Choose Country</option>
+                                            <optgroup label="Asia">
+                                                <option value="singapore">Singapore</option>
+                                                <option value="thailand">Thailand</option>
+                                                <option value="malysia">Malaysia</option>
+                                            </optgroup>
+                                            <optgroup label="America">
+                                                <option value="california">California</option>
+                                                <option value="boston">Boston</option>
+                                            </optgroup>
+                                        </select>
+
+                                        <!-- Input  with type date calendar  -->
+                                        <label for="start">Check In:</label>
+                                        <input type="date" id="start" placeholder="enter start date" name="check-in"
+                                            required>
+
+
+                                        <!-- Type date in same format as Placeholder , will validate the date with pattern   -->
+                                        <label for="checkout">Check out:</label>
+
+                                        <input type="text" id="checkout" placeholder="mm/dd/yyyy"
+                                            pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d"
+                                            name="check-out" required>
+
+                                        <!-- Flexible dates option with check box   -->
+                                        <input type="checkbox" id="flexibleDate" name="flexibleDate">
+                                        <label for="flexibleDate">Flexible Date</label>
+
+
+                                        <li><button id="share">Explore</button></li>
+                                    </form>
+
+                                </menu>
+
+                            </div>
+                        </div>
+
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Second Section with various information about travel in detail list -->
+
+            <section id="about" class="secondSection">
+                <article>
+                    <img src="/images/nearby.png" height="35">
+                    <span>
+                        <dt><strong> Best Places</strong></dt>
+                        <dd><i>Pay through our application</i> <br>
+                            <i>save thousands</i>
+                        </dd>
+                    </span>
+                </article>
+
+                <article>
+                    <img src="/images/nearby.png" height="35">
+                    <span>
+                        <dt><strong> Covid Safe</strong></dt>
+                        <dd><i>Pay through our application</i> <br>
+                            <i>save thousands</i>
+                        </dd>
+                    </span>
+                </article>
+
+                <article>
+                    <img src="/images/nearby.png" height="35">
+                    <span>
+                        <dt><strong>Payment</strong> </dt>
+                        <dd><i>Pay through our application</i> <br>
+                            <i>save thousands</i>
+                        </dd>
+                    </span>
+                </article>
+
+                <article>
+                    <img src="/images/nearby.png" height="35">
+                    <span>
+                        <dt><strong>Find the Best Near you</strong> </dt>
+                        <dd><i>Pay through our application</i> <br>
+                            <i>save thousands</i>
+                        </dd>
+                    </span>
+                </article>
+            </section>
+
+            <!-- Third Section with different Recommended Destinations with details and summary tag-->
+            <section>
+                <div class="thirdSection">
+                    <div style="text-align:center">
+                        <h1>Recommended Destination</h1>
+
+                        <!-- Not Functional Nav list -->
+                        <nav class="nav-item">
+                            <ul style="list-style-type: none;">
+                                <li><a>The Weekend Break</a></li>
+                                <li><a>The Package Holiday</a></li>
+                                <li><a>The Group Tour</a></li>
+                                <li><a>Long Term Slow Travel</a></li>
+                            </ul>
+                        </nav>
+                        <hr>
+
+                    </div>
+                    <div id="places" class="recommendation">
+                        <div>
+
+                            <!-- video Tag with different source  -->
+                            <video width="350" height="200" poster="images/aingapore.png" controls="controls">
+                                <source src="videos/singapore.mp4#t=0.2" type="video/mp4">
+                                <source src="video/singapore.avi#t=0.2" type="video/avi">
+                            </video>
+
+
+                            <!-- Open the marker symbol  to check the summary  -->
+                            <details>
+                                <summary>Singapore</summary>
+                                <p><i>Singapore</i>, officially the Republic of Singapore <br>, is a sovereign island
+                                    country and <br> city-state in maritime Southeast Asia</p>
+                                    <h4>Price : &#36;3999</h4>
+                                <hr>
+                                <form method="get" target="_blank">
+                                    <fieldset class="subscriptions">
+                                        <legend>Subscribe Now</legend>
+
+                                        <!-- Validating  input type as email with northeastern email pattern ,
+                                             only @northeastern.edu is acceptable -->
+
+                                        <label>Enter your northeastern email &#58; </label>
+                                        <br>
+                                        <input type="email" id="email" name="email" pattern=".+@northeastern\.edu"
+                                            required placeholder="xyz@northeastern.edu">
+
+                                        <input type="submit" name="Submit" value="Submit" />
+                                    </fieldset>
+                                </form>
+
+                            </details>
+                        </div>
+                        <div>
+                            <img src="/images/thailand.png" height="200">
+                            <details>
+                                <summary>Thailand</summary>
+                                <p><i>Thailand</i> is a Southeast Asian country &amp;<br> it's known for tropical
+                                    beaches <br>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
+                                    <br>displaying figures of <b>Buddha</b> .
+                                </p>
+                                <h4>Price : &#36;3999</h4>
+                                <hr>
+                                <form>
+                                    <!-- Fielset with input and subscribe option   -->
+                                    <fieldset class="subscriptions">
+                                        <legend>Subscribe Now</legend>
+                                        <label>Enter your northeastern email &#58; </label>
+                                        <br>
+                                        <input type="email" id="email" name="email" pattern=".+@northeastern\.edu"
+                                            required placeholder="xyz@northeastern.edu">
+
+                                        <input type="submit" name="Submit" value="Submit" />
+                                    </fieldset>
+                                </form>
+                            </details>
+                        </div>
+                        <div>
+                            <img src="/images/newzealand.png" height="200">
+                            <details>
+                                <summary>New Zealand</summary>
+                                <p><i>New Zealand</i> is a Southeast Asian country &amp;<br> it's known for tropical
+                                    beaches <br>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
+                                    <br>displaying figures of <b>Buddha</b> .
+                                </p>
+                                <h4>Price : &#36;3999</h4>
+                                <hr>
+                                <form method="get" target="_blank">
+                                    <fieldset class="subscriptions">
+                                        <legend>Subscribe Now</legend>
+                                        <label>Enter your northeastern email &#58; </label>
+                                        <br>
+                                        <input type="email" id="email" name="email" pattern=".+@northeastern\.edu"
+                                            required placeholder="xyz@northeastern.edu">
+
+                                        <input type="submit" name="Submit" value="Submit" />
+                                    </fieldset>
+                                </form>
+                            </details>
+                        </div>
+                        <div>
+                            <img src="/images/aingapore.png" height="200">
+                            <details>
+                                <summary>Malysia</summary>
+                                <p><i>Malysia</i> is a Southeast Asian country &amp;<br> it's known for tropical beaches
+                                    <br>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
+                                    <br>displaying figures of <b>Buddha</b> .
+                                </p>
+                                <h4>Price : &#36;3999</h4>
+                                <hr>
+                                <form method="get" target="_blank">
+                                    <fieldset class="subscriptions">
+                                        <legend>Subscribe Now</legend>
+                                        <label>Enter your northeastern email &#58; </label>
+                                        <br>
+                                        <input type="email" id="email" name="email" pattern=".+@northeastern\.edu"
+                                            required placeholder="xyz@northeastern.edu">
+
+                                        <input type="submit" name="Submit" value="Submit" />
+                                    </fieldset>
+                                </form>
+                            </details>
+                        </div>
+                        <div>
+                            <img src="/images/paris.png" height="200">
+                            <details>
+                                <summary>Paris</summary>
+                                <p><i>Paris</i> is a Southeast Asian country &amp;<br> it's known for tropical beaches
+                                    <br>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
+                                    <br>displaying figures of <b>Buddha</b> .
+                                </p>
+                                <h4>Price : &#36;3999</h4>
+                                <hr>
+                                <form method="get" target="_blank">
+                                    <fieldset class="subscriptions">
+                                        <legend>Subscribe Now</legend>
+                                        <label>Enter your northeastern email &#58; </label>
+                                        <br>
+                                        <input type="email" id="email" name="email" pattern=".+@northeastern\.edu"
+                                            required placeholder="xyz@northeastern.edu">
+
+                                        <input type="submit" name="Submit" value="Submit" />
+                                    </fieldset>
+                                </form>
+                            </details>
+                        </div>
+                        <div>
+                            <img src="/images/ scotland.png" height="200">
+                            <details>
+                                <summary>scotland</summary>
+                                <p><i>Scotland</i> is a Southeast Asian country &amp;<br> it's known for tropical
+                                    beaches <br>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
+                                    <br>displaying figures of <b>Buddha</b> .
+                                </p>
+                                <h4>Price : &#36;3999</h4>
+                                <hr>
+                                <form method="get" target="_blank">
+                                    <fieldset class="subscriptions">
+                                        <legend>Subscribe Now</legend>
+                                        <label>Enter your northeastern email &#58; </label>
+                                        <br>
+                                        <input type="email" id="email" name="email" pattern=".+@northeastern\.edu"
+                                            required placeholder="xyz@northeastern.edu">
+
+                                        <input type="submit" name="Submit" value="Submit" />
+                                    </fieldset>
+                                </form>
+                            </details>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final section with Blogs and testimonial Area for Customers -->
+
+            <div class="finalSection" id="blog">
+                <section>
+                    <!-- Image Source rendered based on screen size . Check Network tab -->
+                    <picture>
+                        <source srcset="/images/blog_600px.png" media="(max-width: 300px)">
+                        <source srcset="/images/blog_1280px.png" media="(max-width: 1200px)">
+                        <img src="/images/blog.png" height="220">
+                    </picture>
+
+                    <!-- <img src="/images/blog.png" height="220"> -->
+                </section>
+
+                <!-- Customer testimonial Section  -->
+                <section>
+                    <h2>Happy Customers</h2>
+                    <article>
+                        <!-- Quote tag to bring reviews in quote " " -->
+                        <q>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<wbr> <em>Lorem
+                                Ipsum has been the
+                                industry's standard</em> <br> dummy text ever since the &shy; <strong>1590</strong></q>
+                        <h4>~Shalini Singh</h4>
+                    </article>
+                    <article>
+                        <q>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> <em>Lorem
+                                Ipsum has been the
+                                industry's standard</em> <br> dummy text ever since the <strong>1590</strong></q>
+                        <h4>~Virat Kohli</h4>
+                    </article>
+                </section>
+
+                <!-- Footer Area with Copyrights and link to Social Media  -->
+                <footer style="display: flex;align-items:center;background: #e1e8f9;padding: 10px;">
+                    <p><b>Copy &copy; 2020 Travello . All Rights reserved&nbsp;<sup>TM</sup></b></p>
+
+                    <!-- Navigation bar with list of items -->
+                    <nav class="nav-item">
+                        <ul style="list-style-type: none;">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#place">Places</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- click the button to navigate to Linkedin Page  -->
+                    <form action="https://linkedin.com/" target="_blank">
+                        <input title="click here to linkedin page" type="image" src="/images/LinkedIn.png"
+                            height="30" />
+                    </form>
+                </footer>
+            </div>
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
