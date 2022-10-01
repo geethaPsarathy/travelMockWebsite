@@ -1,20 +1,127 @@
-.nav-item {
-    margin: 0 auto;
+
+/* Common Section */
+.marginInline{
+    margin-inline:3.7em;
 }
+
+p::first-letter{
+    text-transform: capitalize;
+}
+
+.flexCenter{
+    display: flex;
+    justify-content: center;
+}
+
+label{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+dt{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+dd{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* input element with pseudo elements */
+
+input{
+    outline: none;
+    padding-top: 10px;
+}
+input::placeholder {
+    font-weight: bold;
+    opacity: .5;
+    color: grey;
+}
+
+
+input:focus{
+    outline: 1px solid #3a828ee3;
+    border-radius: 5px;
+
+}
+
+input:hover{
+    cursor:text;
+}
+
+
+
+/* Header Section */
+
+header img{
+    margin:5px;
+    padding: 5px;
+    height: 25px;
+}
+
+/* Child of header  */
+header > .nav-item{
+    position: absolute;
+    top: 0;
+    float: center;
+    left: 50%;
+    margin: 10px;
+    padding: 5px;
+    z-index: 100;
+    transform: translate(-50%, 0);
+}
+
+/* nav-tem immediatiate sibling  */
+header >.nav-item+form{
+    text-align: right;
+    width: 98%;
+    top: 0;
+    position: absolute;
+    margin: 5px;
+    padding: 5px;
+}
+
+
+ /* Font family from Google */
+aside > p{
+    font-family: 'Bungee Spice', cursive;
+}
+
+
+ /* combinators of multiple selectors for nav-item */
 .nav-item ul {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 .nav-item ul li {
-   
     display: inline-block;
 }
 .nav-item ul li a {
     text-decoration: none;
     padding: 8px 15px;
     color: #7e98a6;
+    font-weight: bold;
+
 
 }
+
+/* pseudo elements for a tag on hover , active  */
+a:hover{
+    border-bottom: 1px solid #7e98a6;
+
+}
+a[tabindex]:focus {
+    border-bottom: 1px solid #7e98a6;
+    background: #7e98a60f;
+}
+a::after{
+    border-bottom: 1px solid black;
+    background: #7e98a60f;
+}
+
+
+/* Button Element */
 
 .connect{
     border-radius: 10px;
@@ -23,110 +130,387 @@
     border: 0;
     margin: 5px;
     padding: 8px;
+    z-index:100;
 }
 
-.mainPicOverlay{
-    background-color: rgba(0, 11, 38, 0.5);
-    height: 100%;
-    width: 85%;
-    bottom: 0;
-    color: #FFFFFF;
-    /* left: 89px; */
-    margin: 0;
-    position: absolute;
-
-
+.connect:hover{
+    background: #3a828ee3;
+    box-shadow: 0 0.4em 0.4em -0.4em var(--hover);
+    transform: translateY(-0.15em);
 }
+
+
+                        /* Main Section */
+
+/* First Section */
+
 
 .mainFigure{
     margin: 0;
     padding:0
 }
 
+/* Travel to explore Section : Text over Image */
+
+
 .mainFirstDiv{
+    position: relative;
+}
+
+/* pseudo element background image to overlay text  */
+.mainFirstDiv::before{
+    content: " ";
+    background-image: url("/images/main.png");
+    background-size: cover;
     position: absolute;
-    margin-inline: 3.75rem;
-
-    display: flex;
-    width: 100%;
-    /* justify-content: center; */
-}
-.textDiv{
-    text-align: center;
-   
-}
-.textDiv h2{
-    font-size: 25px;
-}
-
-.exploreButton{
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
     display: flex;
     justify-content: center;
+}
+
+.imageText{
+    position: relative;
+    color: #ffffff;  
+    background-color: rgb(0 11 38 / 43%);
     text-align: center;
 }
 
+.imageText::after{
+  opacity: 1.5;
+}
+
+
+.textDiv h2{
+    font-size: 25px;
+} 
+
+/* Explore Button Section */
+
+.exploreButton{
+    text-align: center;
+}
+
+.exploreButton input{
+    border: 0;
+    background: none;
+    border-bottom: 0.5px solid grey;
+}
+
+.exploreButton > menu{
+    padding: 10px;
+    background: #f5f1f1c9;
+    color: black;
+    border-radius: 16px;
+    /* height: 6vh; */
+}
+.exploreButton > menu >form{
+    display: flex;
+    align-items: center;
+}
+.exploreButton > menu >form >span {
+    display: flex;
+    flex-direction: column;
+    margin: 11px;
+    padding: 10px;
+    text-align: left;
+    border-right: 0.5px solid grey;
+
+}
+span ~label{
+    padding-bottom: 10px;
+}
 .exploreButton li{
     display: inline-block;
 }
 
-.secondDiv{
-    position: absolute;
-    margin-inline: 3.75rem;
-}
 
+/* Second Section */
 main{
     height: 100%;
     position: absolute;
     width: 100%;
 }
 
-.container{
-    display: grid;
-    height: 100%;
-    grid-template-rows: 50% 15% auto;
-}
 
 article{
     border-right: 0.5px solid lightgrey;
     padding: 10px;
 }
 .secondSection{
-    display: flex;
-    justify-content: center;
-    grid-gap: 10px;
-    /* top: 50px; */
-    margin: 10px;
+    grid-gap: 20px;
+    margin: 20px;
+    padding: 40px;
+}
+
+.secondSection article{
+    box-shadow: rgb(100 100 111 / 22%) 0px 5px 17px 3px;
+    border-radius: 17px;
+}
+
+.secondSection article img{
+    height:35px;
+
+}
+
+
+/* Third Section */
+.backgroundSection{
+    background: #fbfdff;
+
+}
+
+.thirdSection{
+    padding: 2em;
+}
+
+.thirdSection>div:first-child{
+    text-align: center;
+}
+
+.thirdSection nav{
+    padding: 10px;
+    margin: 15px;
+    z-index: 100;
 }
 
 .recommendation{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     grid-gap: 20px;
     justify-content: center;
+    padding: 15px;
+    grid-template-columns: auto auto auto;
 }
 
-details {
-    border: 1px solid #aaa;
-    border-radius: 4px;
-    padding: .5em .5em 0;
+.recommendation >div{
+    padding: 10px;
+    margin: 5px;
 }
 
-summary {
-    font-weight: bold;
-    margin: -.5em -.5em 0;
-    padding: .5em;
+.recommendation >img{
+    padding: 5px;
+    border-radius: 25px;
+    margin: 10px;
+}
+.placeSection{
+    text-align: center;
 }
 
-details[open] {
-    padding: .5em;
+.placeSection img{
+    border-radius: 25px;
+    margin: 10px;
+    height: 200px;
 }
 
-details[open] summary {
-    border-bottom: 1px solid #aaa;
-    margin-bottom: .5em;
+.textSection{
+display: flex;
+flex-direction: column;
+margin: 0.2em;
+padding: 0.5em;
+text-align: left;
+
 }
 
+.textSection >span{
+    font-family: sans-serif;
+    font-size: 22px;
+    text-align: left;
+}
+
+.textSection p{
+    font-size: 0.85em;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.floatBox{
+    padding-top: 10px;
+}
+
+.floatBox>div:first-child{
+    margin-left: 5px;
+}
+
+.floatBox>div:nth-child(2){
+    float: right;
+    bottom: 35px;
+    position: relative;
+}
+
+.iconSection i{
+    background: #1a4961;
+    padding: 4px;
+    color: white;
+    fill: none;
+    border-radius: 15px;
+}
+
+.iconSection p{
+    font-size:12px;
+}
+
+/* Selecting Second child div from floatBox  */
+
+.floatBox>div:nth-child(2) h3{
+    margin:0;
+}
+
+.floatBox >div >p{
+    font-size:11px;
+}
+
+
+/* Blog Section  */
 .finalSection{
     text-align: center;
     margin-top :40px;
+    /* display: flex; */
 }
+
+.primaryImage{
+    height: 32vh;
+
+}
+
+.primaryImage::before{
+    content: " ";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+    display: flex;
+    justify-content: center;
+}
+
+.blogPictures{
+    grid-gap: 20px;
+}
+
+.flexBlog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 16px;
+}
+
+img[class~="secondaryImage"]{
+    height: 15vh;
+    width: 30vw;
+}
+
+.blogPictures > figure{
+    display: flex;
+    align-items: center;
+    margin:0;
+}
+
+.blogPictures >figure >img{
+    width: 35vw;
+}
+.overlay{
+    position: absolute;
+    height: 32vh;
+    background-color: rgb(0 11 38 / 43%);
+    align-items: center;
+    width: 35vw;
+}
+
+
+figcaption{
+    padding: 10px;
+    color: white;
+    font-size: 1.85rem;
+    font-weight: 800;
+}
+
+.flexBlog > figure{
+    position: relative;
+    
+}
+
+.secondOverlay{
+    top: 0;
+    height: 15vh;
+    width: 30vw;
+}
+
+/* Customer section */
+
+.reviewCard{
+    display: flex;
+    flex-direction: column;
+    padding: 0.7em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.customerSection{
+    padding: 2em;
+}
+
+.customerSection >div{
+    display: flex;
+    grid-gap: 20px;
+}
+
+.profileName{
+    align-items: center;
+    padding: 15px;
+}
+
+.profileName img{
+    height: 50px;
+    width: 60px;
+    border-radius: 65px;
+}
+
+.profileName span{
+    padding: 10px;
+}
+.profileName span h4,p{
+    margin:0
+}
+
+.profileName span p{
+    color : grey;
+}
+
+/* footer Section */
+footer{
+    display: flex;
+    background: #e1e8f9;
+    padding: 1.5em;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer div{
+    display: flex;
+    grid-gap: 10px;
+}
+
+footer input{
+    height: 30px;
+}
+footer input:hover{
+    cursor: pointer;
+}
+
+footer input:focus{
+    outline: none;
+
+}
+ q::before{
+ 
+    font-size: 2.5em;
+    color:#e1e8f9;
+   
+}
+
+q::after{
+    content:'';
+}
+

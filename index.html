@@ -2,10 +2,11 @@
 <html>
 
 <head>
-    <title>Assignment-2</title>
+    <title>Assignment-3</title>
     <base href="/">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="shortcut icon" href="/images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Using google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -28,17 +29,16 @@
 
     <!-- Header with Navigation Bar , Logo and Connect button -->
 
-    <header style="display: flex;align-items:center">
-        <img style="
-        padding: 5px;" height="25" src="/images/logo.png">
+    <header>
+        <img src="/images/logo.png">
 
         <!-- Navigation bar with list of items -->
         <nav class="nav-item">
-            <ul style="list-style-type: none;">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#places">Places</a></li>
-                <li><a href="#blog">Blog</a></li>
+            <ul>
+                <li><a href="#home" tabindex="1">Home</a></li>
+                <li><a href="#about"  tabindex="1">About</a></li>
+                <li><a href="#places"  tabindex="1">Places</a></li>
+                <li><a href="#blog"  tabindex="1">Blog</a></li>
             </ul>
         </nav>
 
@@ -56,86 +56,74 @@
 
             <!-- First Section with Pictures and Explore Buttons -->
 
-            <section>
-                <div class="mainFirstDiv" style="position:absolute;">
-                    <figure class="mainFigure">
-                        <img style="max-width:95vw;width: 85vw;" src="/images/main.png" alt="main" loading="lazy">
-
-
-                        <div class="mainPicOverlay">
-                            <article class="textDiv">
-                                <h2>TRAVEL TO EXPLORE</h2>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
-                                    <em>Lorem Ipsum has been the
-                                        industry's standard</em> <br> dummy text ever since the <strong>1590</strong>,
-                                    <br> when an unknown printer took a galley of type and
-                                    scrambled it to make a type specimen book.
-                                </p>
-                                <aside>
-                                    <p style="font-family: 'Bungee Spice', cursive;">Package starts from <s>$1000</s> <strong>$999</strong></p>
-                                </aside>
-                                
-                            </article>
+            <section class="mainFirstDiv marginInline">
+            
+                    <div class ="imageText">
+                        <article class="textDiv">
+                            <h2>TRAVEL TO EXPLORE</h2>
+                            <p>lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                                <em>Lorem Ipsum has been the
+                                    industry's standard</em> <br> dummy text ever since the <strong>1590</strong>,
+                                <br> when an unknown printer took a galley of type and
+                                scrambled it to make a type specimen book.
+                            </p>
+                            <aside>
+                                <p>Package starts from <s>$1000</s> <strong>$999</strong></p>
+                            </aside>
                             
-
-                            <!-- Form Validation with option field as required and date validation in valid format
-                               -->
-                            <div class="exploreButton">
-                                <!-- Menu tag with multiple form elements  -->
-
-                                <menu style="padding:0;margin: 5px;padding: 10px;background: grey;">
-                                    <form action="#blog" method="get">
-
-                                        <!-- Country grouped with optgroup and set as required Field -->
-                                        <label>Country</label>
-                                        <select name="country" required>
-                                            <option selected="true" value="">Choose Country</option>
-                                            <optgroup label="Asia">
-                                                <option value="singapore">Singapore</option>
-                                                <option value="thailand">Thailand</option>
-                                                <option value="malysia">Malaysia</option>
-                                            </optgroup>
-                                            <optgroup label="America">
-                                                <option value="california">California</option>
-                                                <option value="boston">Boston</option>
-                                            </optgroup>
-                                        </select>
-
-                                        <!-- Input  with type date calendar  -->
+                        </article>
+                        
+        
+                        <!-- Form Validation with option field as required and date validation in valid format
+                           -->
+                        <div class="exploreButton flexCenter">
+                            <!-- Menu tag with multiple form elements  -->
+        
+                            <menu>
+                                <form action="#blog" method="get">
+                                    <!-- Country grouped with optgroup and set as required Field -->
+                                    <span>
+                                        <label>Where you want to go?</label>
+                                        <input type="search" id="place-search" required placeholder="Search the place to go">
+                                    </span>
+                              
+        
+                                    <!-- Input  with type date calendar  -->
+                                    <span>
                                         <label for="start">Check In:</label>
-                                        <input type="date" id="start" placeholder="enter start date" name="check-in"
-                                            required>
-
-
-                                        <!-- Type date in same format as Placeholder , will validate the date with pattern   -->
+                                        <input type="date" id="start" onfocus="(this.type='date')"  name="check-in"
+                                            >
+                                    </span>
+                                   
+        
+                                    <!-- Type date in same format as Placeholder , will validate the date with pattern   -->
+                                    <span>
                                         <label for="checkout">Check out:</label>
-
+        
                                         <input type="text" id="checkout" placeholder="mm/dd/yyyy"
                                             pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d"
-                                            name="check-out" required>
-
-                                        <!-- Flexible dates option with check box   -->
-                                        <input type="checkbox" id="flexibleDate" name="flexibleDate">
-                                        <label for="flexibleDate">Flexible Date</label>
-
-
-                                        <li><button id="share">Explore</button></li>
-                                    </form>
-
-                                </menu>
-
-                            </div>
+                                            name="check-out" >
+            
+                                    </span>
+        
+                                    <div><button id="share" class="connect">Explore Now</button></div>
+                                </form>
+        
+                            </menu>
+        
                         </div>
-
-                    </figure>
-                </div>
+                    </div>
+          
+                
             </section>
+
+           
 
             <!-- Second Section with various information about travel in detail list -->
 
-            <section id="about" class="secondSection">
+            <section id="about" class="secondSection flexCenter">
                 <article>
-                    <img src="/images/nearby.png" height="35">
+                    <img src="/images/nearby.png" >
                     <span>
                         <dt><strong> Best Places</strong></dt>
                         <dd><i>Pay through our application</i> <br>
@@ -145,7 +133,7 @@
                 </article>
 
                 <article>
-                    <img src="/images/nearby.png" height="35">
+                    <img src="/images/nearby.png" >
                     <span>
                         <dt><strong> Covid Safe</strong></dt>
                         <dd><i>Pay through our application</i> <br>
@@ -155,7 +143,7 @@
                 </article>
 
                 <article>
-                    <img src="/images/nearby.png" height="35">
+                    <img src="/images/nearby.png" >
                     <span>
                         <dt><strong>Payment</strong> </dt>
                         <dd><i>Pay through our application</i> <br>
@@ -165,7 +153,7 @@
                 </article>
 
                 <article>
-                    <img src="/images/nearby.png" height="35">
+                    <img src="/images/nearby.png">
                     <span>
                         <dt><strong>Find the Best Near you</strong> </dt>
                         <dd><i>Pay through our application</i> <br>
@@ -176,173 +164,192 @@
             </section>
 
             <!-- Third Section with different Recommended Destinations with details and summary tag-->
-            <section>
+            <section class="backgroundSection marginInline">
                 <div class="thirdSection">
-                    <div style="text-align:center">
+                    <div>
                         <h1>Recommended Destination</h1>
 
                         <!-- Not Functional Nav list -->
                         <nav class="nav-item">
-                            <ul style="list-style-type: none;">
-                                <li><a>The Weekend Break</a></li>
-                                <li><a>The Package Holiday</a></li>
-                                <li><a>The Group Tour</a></li>
-                                <li><a>Long Term Slow Travel</a></li>
+                            <ul>
+                                <li><a href="#">The Weekend Break</a></li>
+                                <li><a href="#">The Package Holiday</a></li>
+                                <li><a href="#">The Group Tour</a></li>
+                                <li><a href="#">Long Term Slow Travel</a></li>
                             </ul>
                         </nav>
                         <hr>
 
                     </div>
                     <div id="places" class="recommendation">
-                        <div>
-
-                            <!-- video Tag with different source  -->
-                            <video width="350" height="200" poster="images/aingapore.png" controls="controls">
-                                <source src="videos/singapore.mp4#t=0.2" type="video/mp4">
-                                <source src="video/singapore.avi#t=0.2" type="video/avi">
-                            </video>
-
-
+                        <div class="placeSection">
+                            <img src="/images/aingapore.png">
+                            
                             <!-- Open the marker symbol  to check the summary  -->
-                            <details>
-                                <summary>Singapore</summary>
-                                <p><i>Singapore</i>, officially the Republic of Singapore <br>, is a sovereign island
-                                    country and <br> city-state in maritime Southeast Asia</p>
-                                    <h4>Price : &#36;3999</h4>
+                            <div class="textSection">
+                                <span>Singapore</span>
+                                <p><i>Singapore</i>, officially the Republic of Singapore,<wbr>is a sovereign island
+                                    country and <wbr> city-state in maritime Southeast Asia</p>
+                                <div class="floatBox">
+                                    <div class="iconSection">
+                                        <div>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                        </div>
+                                        <p>1000kms</p>
+                                    </div>
+                                    <div>
+                                        <h3>&#36;3999</h3>
+                                        <p>Approx 2 Night Trip</p>
+                                    </div>
+                                </div>
+                              
                                 <hr>
-                                <form method="get" target="_blank">
-                                    <fieldset class="subscriptions">
-                                        <legend>Subscribe Now</legend>
+                             
 
-                                        <!-- Validating  input type as email with northeastern email pattern ,
-                                             only @northeastern.edu is acceptable -->
-
-                                        <label>Enter your northeastern email &#58; </label>
-                                        <br>
-                                        <input type="email" id="email" name="email" pattern=".+@northeastern\.edu"
-                                            required placeholder="xyz@northeastern.edu">
-
-                                        <input type="submit" name="Submit" value="Submit" />
-                                    </fieldset>
-                                </form>
-
-                            </details>
+                            </div>
                         </div>
-                        <div>
-                            <img src="/images/thailand.png" height="200">
-                            <details>
-                                <summary>Thailand</summary>
-                                <p><i>Thailand</i> is a Southeast Asian country &amp;<br> it's known for tropical
-                                    beaches <br>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
-                                    <br>displaying figures of <b>Buddha</b> .
-                                </p>
-                                <h4>Price : &#36;3999</h4>
-                                <hr>
-                                <form>
-                                    <!-- Fielset with input and subscribe option   -->
-                                    <fieldset class="subscriptions">
-                                        <legend>Subscribe Now</legend>
-                                        <label>Enter your northeastern email &#58; </label>
-                                        <br>
-                                        <input type="email" id="email" name="email" pattern=".+@northeastern\.edu"
-                                            required placeholder="xyz@northeastern.edu">
+                        <div class="placeSection">
+                            <img src="/images/thailand.png">
 
-                                        <input type="submit" name="Submit" value="Submit" />
-                                    </fieldset>
-                                </form>
-                            </details>
+                            <div class="textSection">
+                                <span>Thailand</span>
+                                <p><i>Thailand</i> is a Southeast Asian country &amp;<wbr> it's known for tropical
+                                    beaches<wbr>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
+                                    <wbr>displaying figures of <b>Buddha</b> .
+                                </p>
+                                <div class="floatBox">
+                                    <div class="iconSection">
+                                        <div>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                        </div>
+                                        <p>1000kms</p>
+                                    </div>
+                                    <div>
+                                        <h3>&#36;3999</h3>
+                                        <p>Approx 2 Night Trip</p>
+                                    </div>
+                                </div>
+                              
+                                <hr>
+                             
+
+                            </div>
                         </div>
-                        <div>
-                            <img src="/images/newzealand.png" height="200">
-                            <details>
-                                <summary>New Zealand</summary>
-                                <p><i>New Zealand</i> is a Southeast Asian country &amp;<br> it's known for tropical
-                                    beaches <br>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
-                                    <br>displaying figures of <b>Buddha</b> .
-                                </p>
-                                <h4>Price : &#36;3999</h4>
-                                <hr>
-                                <form method="get" target="_blank">
-                                    <fieldset class="subscriptions">
-                                        <legend>Subscribe Now</legend>
-                                        <label>Enter your northeastern email &#58; </label>
-                                        <br>
-                                        <input type="email" id="email" name="email" pattern=".+@northeastern\.edu"
-                                            required placeholder="xyz@northeastern.edu">
+                        <div class="placeSection">
+                            <img src="/images/newzealand.png">
 
-                                        <input type="submit" name="Submit" value="Submit" />
-                                    </fieldset>
-                                </form>
-                            </details>
+
+                            <div class="textSection">
+                                <span>New Zealand</span>
+                                <p><i>New Zealand</i> is a Southeast Asian country &amp;<wbr> it's known for tropical
+                                    beaches <wbr>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
+                                    <wbr>displaying figures of <b>Buddha</b> .
+                                </p>
+                                <div class="floatBox">
+                                    <div class="iconSection">
+                                        <div>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                        </div>
+                                        <p>1000kms</p>
+                                    </div>
+                                    <div>
+                                        <h3>&#36;3999</h3>
+                                        <p>Approx 2 Night Trip</p>
+                                    </div>
+                                </div>
+                              
+                                <hr>
+                             
+
+                            </div>
+
                         </div>
-                        <div>
-                            <img src="/images/aingapore.png" height="200">
-                            <details>
-                                <summary>Malysia</summary>
-                                <p><i>Malysia</i> is a Southeast Asian country &amp;<br> it's known for tropical beaches
-                                    <br>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
-                                    <br>displaying figures of <b>Buddha</b> .
-                                </p>
-                                <h4>Price : &#36;3999</h4>
-                                <hr>
-                                <form method="get" target="_blank">
-                                    <fieldset class="subscriptions">
-                                        <legend>Subscribe Now</legend>
-                                        <label>Enter your northeastern email &#58; </label>
-                                        <br>
-                                        <input type="email" id="email" name="email" pattern=".+@northeastern\.edu"
-                                            required placeholder="xyz@northeastern.edu">
+                        <div class="placeSection">
+                            <img src="/images/aingapore.png">
 
-                                        <input type="submit" name="Submit" value="Submit" />
-                                    </fieldset>
-                                </form>
-                            </details>
+
+                            <div class="textSection">
+                                <span>Malaysia</span>
+                                <p><i>Malaysia</i> is a Southeast Asian country &amp;<wbr> it's known for tropical
+                                    beaches <wbr>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
+                                    <wbr>displaying figures of <b>Buddha</b> .
+                                </p>
+                                <div class="floatBox">
+                                    <div class="iconSection">
+                                        <div>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                        </div>
+                                        <p>1000kms</p>
+                                    </div>
+                                    <div>
+                                        <h3>&#36;3999</h3>
+                                        <p>Approx 2 Night Trip</p>
+                                    </div>
+                                </div>
+                              
+                                <hr>
+                             
+                            </div>
                         </div>
-                        <div>
-                            <img src="/images/paris.png" height="200">
-                            <details>
-                                <summary>Paris</summary>
-                                <p><i>Paris</i> is a Southeast Asian country &amp;<br> it's known for tropical beaches
-                                    <br>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
-                                    <br>displaying figures of <b>Buddha</b> .
+                        <div class="placeSection">
+                            <img src="/images/paris.png">
+                            <div class="textSection">
+                                <span>Paris</span>
+                                <p><i>Paris</i> is a Southeast Asian country &amp;<wbr> it's known for tropical
+                                    beaches <wbr>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
+                                    <wbr>displaying figures of <b>Buddha</b> .
                                 </p>
-                                <h4>Price : &#36;3999</h4>
+                                <div class="floatBox">
+                                    <div class="iconSection">
+                                        <div>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                        </div>
+                                        <p>1000kms</p>
+                                    </div>
+                                    <div>
+                                        <h3>&#36;3999</h3>
+                                        <p>Approx 2 Night Trip</p>
+                                    </div>
+                                </div>
+                              
                                 <hr>
-                                <form method="get" target="_blank">
-                                    <fieldset class="subscriptions">
-                                        <legend>Subscribe Now</legend>
-                                        <label>Enter your northeastern email &#58; </label>
-                                        <br>
-                                        <input type="email" id="email" name="email" pattern=".+@northeastern\.edu"
-                                            required placeholder="xyz@northeastern.edu">
-
-                                        <input type="submit" name="Submit" value="Submit" />
-                                    </fieldset>
-                                </form>
-                            </details>
+                            </div>
                         </div>
-                        <div>
-                            <img src="/images/ scotland.png" height="200">
-                            <details>
-                                <summary>scotland</summary>
-                                <p><i>Scotland</i> is a Southeast Asian country &amp;<br> it's known for tropical
-                                    beaches <br>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
-                                    <br>displaying figures of <b>Buddha</b> .
+                        <div class="placeSection">
+                            <img src="/images/ scotland.png">
+                            <div class="textSection">
+                                <span>Scotland</span>
+                                <p><i>Scotland</i> is a Southeast Asian country &amp;<wbr> it's known for tropical
+                                    beaches <wbr>, <strong>opulent</strong> palaces, ancient ruins and ornate temples
+                                    <wbr>displaying figures of <b>Buddha</b> .
                                 </p>
-                                <h4>Price : &#36;3999</h4>
+                                <div class="floatBox">
+                                    <div class="iconSection">
+                                        <div>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                            <i class="fa-solid fa-plane-up"></i>
+                                        </div>
+                                        <p>1000kms</p>
+                                    </div>
+                                    <div>
+                                        <h3>&#36;3999</h3>
+                                        <p>Approx 2 Night Trip</p>
+                                    </div>
+                                </div>
+                              
                                 <hr>
-                                <form method="get" target="_blank">
-                                    <fieldset class="subscriptions">
-                                        <legend>Subscribe Now</legend>
-                                        <label>Enter your northeastern email &#58; </label>
-                                        <br>
-                                        <input type="email" id="email" name="email" pattern=".+@northeastern\.edu"
-                                            required placeholder="xyz@northeastern.edu">
-
-                                        <input type="submit" name="Submit" value="Submit" />
-                                    </fieldset>
-                                </form>
-                            </details>
+                            </div>
 
                         </div>
                     </div>
@@ -353,41 +360,81 @@
 
             <div class="finalSection" id="blog">
                 <section>
-                    <!-- Image Source rendered based on screen size . Check Network tab -->
-                    <picture>
-                        <source srcset="/images/blog_600px.png" media="(max-width: 300px)">
-                        <source srcset="/images/blog_1280px.png" media="(max-width: 1200px)">
-                        <img src="/images/blog.png" height="220">
-                    </picture>
+                    <h1>Blogs</h1>
+                    <div class="blogPictures flexCenter">
+                        <figure>
+                            <img class="primaryImage" src="/images/grassSwiss.png">
+                            <div class="overlay">
+                            <figcaption> A ultimate guide to <wbr> climb <br> Kilimanjaro</figcaption>
+                            </div>
+                            
+                        </figure>
+                        <div class="flexBlog">
 
-                    <!-- <img src="/images/blog.png" height="220"> -->
+                            <figure>
+                                <img class="secondaryImage" src="/images/grassSwiss.png">
+                                <div class="overlay secondOverlay flexCenter">
+                                <figcaption>12 Things I'd Tell<br> any new traveller </figcaption>
+                                </div>
+                                
+                            </figure>
+                            <!-- <img class="secondaryImage" src="/images/grassSwiss.png" > -->
+                            <figure>
+                                <img class="secondaryImage" src="/images/grassSwiss.png">
+                                <div class="overlay secondOverlay">
+                                <figcaption>12 Things I'd Tell<br> any new traveller </figcaption>
+                                </div>
+                                
+                            </figure>
+                            
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Customer testimonial Section  -->
-                <section>
-                    <h2>Happy Customers</h2>
-                    <article>
-                        <!-- Quote tag to bring reviews in quote " " -->
-                        <q>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<wbr> <em>Lorem
-                                Ipsum has been the
-                                industry's standard</em> <br> dummy text ever since the &shy; <strong>1590</strong></q>
-                        <h4>~Shalini Singh</h4>
-                    </article>
-                    <article>
-                        <q>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> <em>Lorem
-                                Ipsum has been the
-                                industry's standard</em> <br> dummy text ever since the <strong>1590</strong></q>
-                        <h4>~Virat Kohli</h4>
-                    </article>
+                <section class="customerSection marginInline">
+                    <h1>Happy Customers</h1>
+                    <div>
+                        <article class="reviewCard">
+                            <!-- Quote tag to bring reviews in quote " " -->
+                            <q>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<wbr> <em>Lorem
+                                    Ipsum has been the
+                                    industry's standard</em> <br> dummy text ever since the &shy; <strong>1590</strong></q>
+                            
+                            <span class="profileName flexCenter">
+                                <img src="/images/blank_profile.png">
+                                <span>
+                                    <h4>Shalini Singh</h4>
+                                    <p>Project Manager flyhigh</p>
+                                </span>
+                            </span>
+                            
+                        </article>
+                        <article class="reviewCard">
+                            <!-- Quote tag to bring reviews in quote " " -->
+                            <q>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<wbr> <em>Lorem
+                                    Ipsum has been the
+                                    industry's standard</em> <br> dummy text ever since the &shy; <strong>1590</strong></q>
+                            
+                            <span class="profileName flexCenter">
+                                <img src="/images/blank_profile.png">
+                                <span>
+                                    <h4>Virat Kohli</h4>
+                                    <p>Project Manager vodo</p>
+                                </span>
+                            </span>
+                            
+                        </article>
+                    </div>
                 </section>
 
                 <!-- Footer Area with Copyrights and link to Social Media  -->
-                <footer style="display: flex;align-items:center;background: #e1e8f9;padding: 10px;">
+                <footer>
                     <p><b>Copy &copy; 2020 Travello . All Rights reserved&nbsp;<sup>TM</sup></b></p>
 
                     <!-- Navigation bar with list of items -->
                     <nav class="nav-item">
-                        <ul style="list-style-type: none;">
+                        <ul>
                             <li><a href="#home">Home</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#place">Places</a></li>
@@ -396,10 +443,21 @@
                     </nav>
 
                     <!-- click the button to navigate to Linkedin Page  -->
-                    <form action="https://linkedin.com/" target="_blank">
-                        <input title="click here to linkedin page" type="image" src="/images/LinkedIn.png"
-                            height="30" />
-                    </form>
+                    <div>
+                        <form action="https://linkedin.com/" target="_blank">
+                            <input title="click here to linkedin page" type="image" src="/images/LinkedIn.png"
+                                 />
+                        </form>
+                        <form action="https://facebook.com/" target="_blank">
+                            <input title="click here to linkedin page" type="image" src="/images/fb.png"
+                                />
+                        </form>
+                        <form action="https://instagram.com/" target="_blank">
+                            <input title="click here to linkedin page" type="image" src="/images/ig.png"
+                               />
+                        </form>
+                    </div>
+                    
                 </footer>
             </div>
         </div>
