@@ -160,7 +160,7 @@ a::after{
 /* pseudo element background image to overlay text  */
 .mainFirstDiv::before{
     content: " ";
-    background-image: url("images/main.png");
+    background-image: url("../images/main.png");
     background-size: cover;
     position: absolute;
     top: 0px;
